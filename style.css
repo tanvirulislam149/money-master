@@ -1,3 +1,25 @@
-.check{
-    color: pink;
+.header-color{
+    color: rgb(22, 160, 45);
+}
+.money-img{
+    height: 100%;
+    width: 100%;
+}
+.bg-income{
+    background-color: rgb(245, 245, 245);
+    height: 100%;
+}
+.bg-input{
+    background-color: rgb(216, 216, 216);
+}
+.error-msg{
+    background-color: rgb(243, 206, 206);
+    color: rgb(190, 52, 52);
+}
+.btn-color{
+    background-color: rgb(22, 160, 45);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 600;
 }

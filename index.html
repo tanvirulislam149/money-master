@@ -14,7 +14,53 @@
 </head>
 
 <body>
-    <h1 class="check">Checking</h1>
+    <header>
+        <h1 class="text-center fs-1 header-color fw-bold my-4">Financial Assistant</h1>
+    </header>
+    <main>
+        <div class="px-md-5">
+            <div class="row gx-5 px-5">
+                <div class="col-sm-12 col-md-7 px-0 px-md-4 mb-sm-4 mb-4 mb-md-0">
+                    <img class="money-img" src="money.jpg" alt="">
+                </div>
+                <div class="col-sm-12 col-md-5 text-center bg-income">
+                    <h4 class="fw-bold mb-3">Income</h4>
+                    <label class="fw-bold" for="Income">Income:</label>
+                    <input class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="" id="">
+                    <!---------------------------------------------- Expenses Information  --->
+                    <h4 class="fw-bold mb-3">Expenses</h4>
+                    <label class="fw-bold pe-4" for="Income">Food:</label>
+                    <input class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="" id="">
+                    <br>
+                    <label class="fw-bold pe-4" for="Income">Rent:</label>
+                    <input class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="" id="">
+                    <br>
+                    <label class="fw-bold pe-1" for="Income">Clothes:</label>
+                    <input class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="" id="">
+                    <br>
+                    <p class="error-msg">Wrong input. Please check again.</p>
+                    <button type="button" id="calc-btn" class="btn btn-color">Calculate</button>
+                    <br>
+                    <h5 class="fw-bold my-2">Total Expenses: <span>5000</span></h5>
+                    <h5 class="fw-bold my-2">Balance: <span>4500</span></h5>
+                    <!-------------------------------------------------- Saving Information -->
+                    <label class="fw-bold pe-1" for="Income">Save:</label>
+                    <input class="border-0 bg-input img-fluid mb-3 text-center" type="number" name="" id="">
+                    <span class="fw-bold"> % </span>
+                    <button type="button" class="border-0 btn-color">Save</button>
+                    <p class="error-msg">Wrong input. Please check again.</p>
+                    <h5 class="fw-bold my-2">Saving Amount: <span>5000</span></h5>
+                    <h5 class="fw-bold my-2">Remaining Balance: <span>4500</span></h5>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
 
     <!-- Javascript file -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
