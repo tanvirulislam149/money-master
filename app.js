@@ -71,6 +71,7 @@ function calculateSavings() {
     let incomeNumber = incomeAndSaveInput("income-field", "income-error");
     let saveNumber = incomeAndSaveInput("save-field", "save-error");
     let savingsAmount = document.getElementById("savings-amount");
+    let remainingBalance = document.getElementById("remaining-balance");
     let error = document.getElementById("save-error");
     let compareBalance = calculatingBalance();
     let savings = (incomeNumber * (saveNumber / 100));
@@ -81,6 +82,7 @@ function calculateSavings() {
     else {
         error.style.display = "none";
         savingsAmount.innerText = savings;
+        remainingBalance.innerText = compareBalance - savings;
     }
 
 }
