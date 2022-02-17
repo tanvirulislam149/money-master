@@ -12,7 +12,7 @@ function incomeAndSaveInput(field, errorField) {
     }
     else {
         error.style.display = "block";
-        error.innerText = "You can't put text here";
+        error.innerText = "Please put some valid information";
     }
 
 }
@@ -66,7 +66,7 @@ function calculatingExpenses(food, rent, clothes) {
     }
     else {
         calculateError.style.display = "block";
-        calculateError.innerText = "You can't put text here";
+        calculateError.innerText = "Please put some valid information";
     }
     return expensesNumber;
 }
@@ -88,15 +88,15 @@ function calculateSavings() {
     let saveNumber = incomeAndSaveInput("save-field", "save-error");
     let savingsAmount = document.getElementById("savings-amount");
     let remainingBalance = document.getElementById("remaining-balance");
-    let error = document.getElementById("save-error");
+    let savingsError = document.getElementById("save-error");
     let compareBalance = calculatingBalance();
     let savings = (incomeNumber * (saveNumber / 100));
-    if (savings > compareBalance) {
-        error.style.display = "block";
-        error.innerText = "Wrong information on input Field";
+    if (savings > compareBalance || typeof saveNumber == "undefined") {
+        savingsError.style.display = "block";
+        savingsError.innerText = "Wrong input";
     }
     else {
-        error.style.display = "none";
+        savingsError.style.display = "none";
         savingsAmount.innerText = savings;
         remainingBalance.innerText = compareBalance - savings;
     }
