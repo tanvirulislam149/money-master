@@ -12,7 +12,7 @@ function incomeAndSaveInput(field, errorField) {
     }
     else {
         error.style.display = "block";
-        error.innerText = "You can't put text number";
+        error.innerText = "You can't put text here";
     }
 
 }
@@ -51,11 +51,22 @@ function calculatingExpenses(food, rent, clothes) {
         calculateError.style.display = "block";
         calculateError.innerText = "Wrong information on Clothes Field";
     }
-    else {
+    else if (foodField > 0 && rentField > 0 && clothesField > 0) {
         let addExpenses = foodField + rentField + clothesField;
-        expensesText.innerText = addExpenses;
-        expensesNumber = parseFloat(expensesText.innerText);
-        calculateError.style.display = "none";
+        let incomeNumber = incomeAndSaveInput("income-field", "income-error");
+        if (incomeNumber > addExpenses) {
+            expensesText.innerText = addExpenses;
+            expensesNumber = parseFloat(expensesText.innerText);
+            calculateError.style.display = "none";
+        }
+        else {
+            calculateError.style.display = "block";
+            calculateError.innerText = "Not enough money";
+        }
+    }
+    else {
+        calculateError.style.display = "block";
+        calculateError.innerText = "You can't put text here";
     }
     return expensesNumber;
 }
