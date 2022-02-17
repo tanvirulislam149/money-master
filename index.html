@@ -26,31 +26,33 @@
                 <div class="col-sm-12 col-md-5 text-center bg-income">
                     <h4 class="fw-bold mb-3">Income</h4>
                     <label class="fw-bold" for="Income">Income:</label>
-                    <input class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="" id="">
+                    <input id="income-field" class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="">
+                    <p id="income-error" class="error-msg"></p>
                     <!---------------------------------------------- Expenses Information  --->
                     <h4 class="fw-bold mb-3">Expenses</h4>
                     <label class="fw-bold pe-4" for="Income">Food:</label>
-                    <input class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="" id="">
+                    <input id="food-field" class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="">
                     <br>
                     <label class="fw-bold pe-4" for="Income">Rent:</label>
-                    <input class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="" id="">
+                    <input id="rent-field" class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="">
                     <br>
                     <label class="fw-bold pe-1" for="Income">Clothes:</label>
-                    <input class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="" id="">
+                    <input id="clothes-field" class="border-0 bg-input img-fluid mb-3 ps-2" type="number" name="">
                     <br>
-                    <p class="error-msg">Wrong input. Please check again.</p>
+                    <p id="calculate-error" class="error-msg"></p>
                     <button type="button" id="calc-btn" class="btn btn-color">Calculate</button>
                     <br>
-                    <h5 class="fw-bold my-2">Total Expenses: <span>5000</span></h5>
-                    <h5 class="fw-bold my-2">Balance: <span>4500</span></h5>
+                    <h5 class="fw-bold my-2">Total Expenses: <span id="total-expenses">0000</span></h5>
+                    <h5 class="fw-bold my-2">Balance: <span id="balance">0000</span></h5>
                     <!-------------------------------------------------- Saving Information -->
                     <label class="fw-bold pe-1" for="Income">Save:</label>
-                    <input class="border-0 bg-input img-fluid mb-3 text-center" type="number" name="" id="">
+                    <input id="save-field" class="border-0 bg-input img-fluid mb-3 text-center" type="number" name="">
                     <span class="fw-bold"> % </span>
-                    <button type="button" class="border-0 btn-color">Save</button>
-                    <p class="error-msg">Wrong input. Please check again.</p>
-                    <h5 class="fw-bold my-2">Saving Amount: <span>5000</span></h5>
-                    <h5 class="fw-bold my-2">Remaining Balance: <span>4500</span></h5>
+                    <button type="button" id="save-btn" class="border-0 btn-color">Save</button>
+                    <p id="save-error" class="error-msg"></p>
+                    <h5 class="fw-bold my-2">Saving Amount: <span id="savings-amount">2000</span></h5>
+                    <h5 class="fw-bold my-2">Remaining Balance: <span>2500</span></h5>
+                    <button type="button" id="clear-btn" class="border-0 btn-color">Clear</button>
                 </div>
             </div>
         </div>
