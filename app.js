@@ -1,15 +1,20 @@
 // taking value from single input field 
 function incomeAndSaveInput(field, errorField) {
-    let fieldValue = parseFloat(document.getElementById(field).value);
+    let fieldText = document.getElementById(field).value;
     let error = document.getElementById(errorField);
-    if (fieldValue < 0) {
+    if (fieldText < 0) {
         error.style.display = "block";
-        error.innerText = "Wrong information on input Field";
+        error.innerText = "You can't put negative number";
+    }
+    else if (fieldText > 0) {
+        error.style.display = "none";
+        return parseFloat(fieldText);
     }
     else {
-        error.style.display = "none";
-        return fieldValue;
+        error.style.display = "block";
+        error.innerText = "You can't put text number";
     }
+
 }
 // Calculating Expenses
 function calculatingExpenses(food, rent, clothes) {
